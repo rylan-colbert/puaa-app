@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 17px;
+  }
+  body {
+    @apply font-sans text-gray-900 antialiased;
+    background: linear-gradient(135deg, #F5F1E8 0%, #E8E4DC 25%, #EDE9E0 50%, #E2DDD2 75%, #F0ECE4 100%);
+    min-height: 100vh;
+    background-attachment: fixed;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, rgba(45, 74, 39, 0.03) 1px, transparent 0);
+    background-size: 28px 28px;
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
